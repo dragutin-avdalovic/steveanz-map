@@ -9,6 +9,7 @@ L.Icon.Default.mergeOptions({
     iconUrl: require('leaflet/dist/images/marker-icon.png'),
     shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
+import "@/assets/style.css"
 import "leaflet/dist/leaflet.css"
 import Element from 'element-ui'
 Vue.use(Element)

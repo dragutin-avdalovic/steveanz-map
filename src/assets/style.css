@@ -1,0 +1,9 @@
+.el-collapse-item__content {
+    padding-bottom: 25px;
+    font-size: 13px;
+    color: #303133;
+    line-height: 1.769230769230769;
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important;
+}

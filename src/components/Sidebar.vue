@@ -2,6 +2,7 @@
     <div class="sidebar">
         <el-collapse v-model="activeNames" @change="handleChange">
             <el-collapse-item title="Route information" name="1">
+                <span id="sport_icon" class="sport35 running35" title="running"></span>
                 <el-select v-model="value" filterable placeholder="Select sport">
                     <el-option
                             v-for="item in options"
@@ -82,4 +83,19 @@
     el-collapse {
        text-align: center;
     }
+    el-collapse-item {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .sport35 {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/running.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.7);
+        }
 </style>
