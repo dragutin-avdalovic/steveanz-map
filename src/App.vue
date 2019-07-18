@@ -1,15 +1,18 @@
 <template>
   <div id="app">
+    <Sidebar></Sidebar>
     <Map></Map>
   </div>
 </template>
 
 <script>
 import Map from './components/Map.vue'
+import Sidebar from "./components/Sidebar";
 
 export default {
   name: 'app',
   components: {
+      Sidebar,
     Map
   }
 }
@@ -22,7 +25,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 0px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
 }
 body {
   margin: 0;
