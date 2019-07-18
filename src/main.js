@@ -10,6 +10,8 @@ L.Icon.Default.mergeOptions({
     shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
 import "leaflet/dist/leaflet.css"
+import Element from 'element-ui'
+Vue.use(Element)
 Vue.config.productionTip = false
 
 new Vue({
