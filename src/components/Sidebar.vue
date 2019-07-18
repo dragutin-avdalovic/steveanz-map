@@ -12,6 +12,6 @@
     .sidebar {
         width: 20%;
         height: 100%;
-        background: cadetblue;
+        background: red;
     }
 </style>
