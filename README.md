@@ -24,6 +24,6 @@ npm run test
 ```
 npm run lint
 ```
+# steveanz-map
+Map for planning routes for running, bicycling, marathons, driving etc.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
