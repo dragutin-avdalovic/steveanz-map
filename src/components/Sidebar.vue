@@ -2,13 +2,14 @@
     <div class="sidebar">
         <el-collapse v-model="activeNames" @change="handleChange">
             <el-collapse-item title="Route information" name="1">
-                <span id="sport_icon" class="sport35 running35" title="running"></span>
+                <span id="sport_icon" class="cross-country-skiing35 " title="running"></span>
                 <el-select v-model="value" filterable placeholder="Select sport">
                     <el-option
                             v-for="item in options"
                             :key="item.value"
                             :label="item.label"
-                            :value="item.value">
+                            :value="item.value"
+                            @click="selectItem(item.value)">
                     </el-option>
                 </el-select>
             </el-collapse-item>
@@ -25,6 +26,8 @@
 </template>
 
 <script>
+    /* eslint-disable no-console */
+
     export default {
         name: "Sidebar",
         data() {
@@ -53,6 +56,10 @@
                     label: 'Canoeing'
                 },
                 {
+                    value: 'Horse riding',
+                    label: 'Horse riding    '
+                },
+                {
                     value: 'Downhill skiing',
                     label: 'Downhill skiing'
                 },
@@ -65,6 +72,10 @@
         },
         methods: {
             handleChange(val) {
+                console.log(val);
+            },
+            selectItem(val){
+                console.log('kakkasd');
                 console.log(val);
             }
         }
@@ -93,6 +104,86 @@
         width: 65px;
         height: 65px;
         background-image: url(../assets/images/running.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.7);
+        }
+    .walking35 {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/walking.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.7);
+        }
+    .cycling35 {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/cycling.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.7);
+        }
+    .mountain-biking35 {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/mountain-biking.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.7);
+        }
+    .swimming35 {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/swimming.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.7);
+        }
+    .canoeing35 {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/canoeing.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.7);
+        }
+    .horse-riding35 {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/horse-riding.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.7);
+        }
+    .downhill-skiing35 {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/downhill-skiing.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.7);
+        }
+    .cross-country-skiing35 {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/cross-country-skiing.png);
         background-repeat: no-repeat;
         padding: 0!important;
         margin-right: 10px;
