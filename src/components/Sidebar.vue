@@ -46,8 +46,32 @@
                 </el-row>
             </el-collapse-item>
             <el-collapse-item title="Edit Route" name="3">
+                <el-row class="row-btns">
+                    <el-checkbox v-model="checked1" label=" Follow roads" border></el-checkbox>
+                </el-row>
+                <el-row class="row-btns">
+                    <el-button type="primary" icon="el-icon-search" circle></el-button>
+                    <el-button type="primary" icon="el-icon-edit" circle></el-button>
+                </el-row>
+                <el-row class="row-btns">
+                    <el-button type="primary" icon="el-icon-check" circle></el-button>
+                    <el-button type="primary" icon="el-icon-message" circle></el-button>
+                </el-row>
+                <el-row class="row-btns">
+                    <el-button type="primary" icon="el-icon-star-off" circle></el-button>
+                    <el-button type="info" icon="el-icon-delete" circle></el-button>
+                </el-row>
             </el-collapse-item>
             <el-collapse-item title="Graphs" name="4">
+                <el-row class="row-btns">
+                    <el-checkbox v-model="checked1" label="Show elevation" border></el-checkbox>
+                </el-row>
+                <el-row class="row-btns">
+                <el-checkbox v-model="checked1" label="Show gradient" border></el-checkbox>
+                </el-row>
+                <el-row class="row-btns">
+                    <el-button type="primary" icon="el-icon-star-off"> Refresh elevation</el-button>
+                </el-row>
             </el-collapse-item>
             <el-collapse-item title="Preferences" name="4">
             </el-collapse-item>
@@ -123,6 +147,8 @@
         font-size: 100%;
         vertical-align: baseline;
         background: transparent;
+        max-height: 100vh;
+        overflow: auto;
     }
     el-collapse {
        text-align: center;
@@ -267,5 +293,10 @@
     .row-btns {
         width: 100%;
         padding: 10px;
+    }
+    .row-btns .el-checkbox {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #777;
     }
 </style>
