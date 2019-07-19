@@ -2,14 +2,13 @@
     <div class="sidebar">
         <el-collapse v-model="activeNames" @change="handleChange">
             <el-collapse-item title="Route information" name="1">
-                <span id="sport_icon" class="cross-country-skiing35 " title="running"></span>
-                <el-select v-model="value" filterable placeholder="Select sport">
+                <span id="sport_icon" :class="sportClass" title="running" ref="sport-icon"></span>
+                <el-select @change="handleChange" :value="value" filterable placeholder="Select sport">
                     <el-option
                             v-for="item in options"
                             :key="item.value"
                             :label="item.label"
-                            :value="item.value"
-                            @click="selectItem(item.value)">
+                            :value="item.value">
                     </el-option>
                 </el-select>
             </el-collapse-item>
@@ -35,48 +34,47 @@
                 activeNames: ['1'],
                 label: 'Select sport',
                 options: [{
-                    value: 'Running',
+                    value: 'running',
                     label: 'Running'
                 }, {
-                    value: 'Walking',
+                    value: 'walking',
                     label: 'Walking'
                 }, {
-                    value: 'Cycling',
+                    value: 'cycling',
                     label: 'Cycling'
                 }, {
-                    value: 'Mountain biking',
+                    value: 'mountain_biking',
                     label: 'Mountain biking'
                 },
                 {
-                    value: 'Swimming',
+                    value: 'swimming',
                     label: 'Swimming'
                 },
                 {
-                    value: 'Canoeing',
+                    value: 'canoeing',
                     label: 'Canoeing'
                 },
                 {
-                    value: 'Horse riding',
+                    value: 'horse_riding',
                     label: 'Horse riding    '
                 },
                 {
-                    value: 'Downhill skiing',
+                    value: 'downhill_skiing',
                     label: 'Downhill skiing'
                 },
                 {
-                    value: 'Cross-country skiing',
+                    value: 'cross-country_skiing',
                     label: 'Cross-country skiing'
                 }],
-                value: 'Running'
+                value: 'Running',
+                prevSelected: 'Running',
+                sportClass: 'running'
             };
         },
         methods: {
-            handleChange(val) {
-                console.log(val);
-            },
-            selectItem(val){
-                console.log('kakkasd');
-                console.log(val);
+            handleChange: function (selected) {
+                this.value = selected;
+                this.sportClass = selected;
             }
         }
     }
@@ -99,7 +97,7 @@
         flex-direction: row;
         align-items: flex-end;
     }
-    .sport35 {
+    .running {
         display: inline-block;
         width: 65px;
         height: 65px;
@@ -109,7 +107,7 @@
         margin-right: 10px;
         transform: scale(0.7);
         }
-    .walking35 {
+    .walking {
         display: inline-block;
         width: 65px;
         height: 65px;
@@ -119,7 +117,7 @@
         margin-right: 10px;
         transform: scale(0.7);
         }
-    .cycling35 {
+    .cycling {
         display: inline-block;
         width: 65px;
         height: 65px;
@@ -129,7 +127,7 @@
         margin-right: 10px;
         transform: scale(0.7);
         }
-    .mountain-biking35 {
+    .mountain_biking {
         display: inline-block;
         width: 65px;
         height: 65px;
@@ -139,7 +137,7 @@
         margin-right: 10px;
         transform: scale(0.7);
         }
-    .swimming35 {
+    .swimming {
         display: inline-block;
         width: 65px;
         height: 65px;
@@ -149,7 +147,7 @@
         margin-right: 10px;
         transform: scale(0.7);
         }
-    .canoeing35 {
+    .canoeing {
         display: inline-block;
         width: 65px;
         height: 65px;
@@ -159,7 +157,7 @@
         margin-right: 10px;
         transform: scale(0.7);
         }
-    .horse-riding35 {
+    .horse_riding{
         display: inline-block;
         width: 65px;
         height: 65px;
@@ -169,7 +167,7 @@
         margin-right: 10px;
         transform: scale(0.7);
         }
-    .downhill-skiing35 {
+    .downhill_skiing {
         display: inline-block;
         width: 65px;
         height: 65px;
@@ -179,7 +177,7 @@
         margin-right: 10px;
         transform: scale(0.7);
         }
-    .cross-country-skiing35 {
+    .cross-country_skiing {
         display: inline-block;
         width: 65px;
         height: 65px;
