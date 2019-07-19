@@ -26,7 +26,7 @@
 
 <style scoped>
     .map {
-        width: 80%;
+        width: 75%;
         height: 100vh;
     }
 </style>

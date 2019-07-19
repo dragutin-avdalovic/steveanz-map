@@ -101,7 +101,7 @@
 
 <style scoped>
     .sidebar {
-        width: 20%;
+        width: 25%;
         height: 100vh;
         outline: 0;
         font-size: 100%;
@@ -231,16 +231,19 @@
         margin-right: 10px;
         transform: scale(0.9);
         }
-    .collapse-row span.label {
-        font-size: .9em;
+    .collapse-row {
+        align-items: center;
+    }
+    .label {
+        font-size: 1.1em;
         font-style: italic;
     }
-    .collapse-row span.value {
+    .value {
         font-size: 1.6em;
         font-weight: bold;
         color: #888;
     }
-    .collapse-row span.unit {
+    .unit {
         font-size: 1.1em;
         font-weight: bold;
         color: #777;

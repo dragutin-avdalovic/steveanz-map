@@ -1,10 +1,16 @@
 .el-collapse-item__content {
     padding-bottom: 25px;
+    padding-left: 25px;
     font-size: 13px;
     color: #303133;
     line-height: 1.769230769230769;
-    align-items: center !important;
-    justify-content: center !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
     display: flex !important;
     flex-direction: column;
+}
+.el-select .el-input__inner {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #888;
 }
