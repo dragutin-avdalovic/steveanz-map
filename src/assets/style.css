@@ -21,3 +21,8 @@
     color: #408877;
     padding-left: 1em;
 }
+.el-select-dropdown__item {
+    font-size: 1em;
+    font-weight: bold;
+    color: #888;
+}

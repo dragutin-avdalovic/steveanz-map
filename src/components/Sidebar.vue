@@ -29,6 +29,21 @@
                 </div>
             </el-collapse-item>
             <el-collapse-item title="Draw Route" name="2">
+                <el-row class="row-btns">
+                    <el-checkbox v-model="checked1" label=" Follow roads" border></el-checkbox>
+                </el-row>
+                <el-row class="row-btns">
+                    <el-button type="primary" icon="el-icon-search" circle></el-button>
+                    <el-button type="primary" icon="el-icon-edit" circle></el-button>
+                </el-row>
+                <el-row class="row-btns">
+                    <el-button type="primary" icon="el-icon-check" circle></el-button>
+                    <el-button type="primary" icon="el-icon-message" circle></el-button>
+                </el-row>
+                <el-row class="row-btns">
+                    <el-button type="primary" icon="el-icon-star-off" circle></el-button>
+                    <el-button type="info" icon="el-icon-delete" circle></el-button>
+                </el-row>
             </el-collapse-item>
             <el-collapse-item title="Edit Route" name="3">
             </el-collapse-item>
@@ -84,7 +99,8 @@
                 }],
                 value: 'Running',
                 prevSelected: 'Running',
-                sportClass: 'running'
+                sportClass: 'running',
+                checked1: false
             };
         },
         methods: {
@@ -247,5 +263,9 @@
         font-size: 1.1em;
         font-weight: bold;
         color: #777;
+    }
+    .row-btns {
+        width: 100%;
+        padding: 10px;
     }
 </style>
