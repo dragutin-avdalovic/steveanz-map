@@ -74,6 +74,20 @@
                 </el-row>
             </el-collapse-item>
             <el-collapse-item title="Preferences" name="4">
+                <el-row class="row-btns">
+                    <el-checkbox v-model="checked1" label="Distance markers" border></el-checkbox>
+                </el-row>
+                <el-row class="row-btns">
+                    <el-checkbox v-model="checked1" label="Auto-scroll map" border></el-checkbox>
+                </el-row>
+                <el-row class="row-btns">
+                    <el-radio-group v-model="radio2">
+                        <el-radio-button label="mile"></el-radio-button>
+                        <el-radio-button label="km"></el-radio-button>
+                        <el-radio-button label="kcal"></el-radio-button>
+                        <el-radio-button label="kJ"></el-radio-button>
+                    </el-radio-group>
+                </el-row>
             </el-collapse-item>
         </el-collapse>
     </div>
