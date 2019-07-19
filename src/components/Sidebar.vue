@@ -1,9 +1,10 @@
 <template>
     <div class="sidebar">
-        <el-collapse v-model="activeNames" @change="handleChange">
+        <el-collapse v-model="activeNames" @change="handleChangeNames">
             <el-collapse-item title="Route information" name="1">
-                <span id="sport_icon" :class="sportClass" title="running" ref="sport-icon"></span>
-                <el-select @change="handleChange" :value="value" filterable placeholder="Select sport">
+                <div class="collapse-row">
+                    <span id="sport_icon" :class="sportClass" title="running" ref="sport-icon"></span>
+                    <el-select @change="handleChange" :value="value" filterable placeholder="Select sport">
                     <el-option
                             v-for="item in options"
                             :key="item.value"
@@ -11,6 +12,21 @@
                             :value="item.value">
                     </el-option>
                 </el-select>
+                </div>
+                <div class="collapse-row">
+                    <span id="distance" class="distance" title="distance"></span>
+                    <p><span class="label">distance</span><br>
+                        <span class="value distance_val" id="distanceElem">0.00</span>
+                        <span class="unit distance_unit"> ml</span>
+                    </p>
+                </div>
+                <div class="collapse-row">
+                    <span id="energy" class="energy" title="energy"></span>
+                    <p><span class="label">energy</span><br>
+                        <span class="value energy_val" id="energyElem">0</span>
+                        <span class="unit energy_unit">kcal</span>
+                    </p>
+                </div>
             </el-collapse-item>
             <el-collapse-item title="Draw Route" name="2">
             </el-collapse-item>
@@ -75,6 +91,9 @@
             handleChange: function (selected) {
                 this.value = selected;
                 this.sportClass = selected;
+            },
+            handleChangeNames: function (selected) {
+                this.activeNames = selected;
             }
         }
     }
@@ -94,8 +113,13 @@
     }
     el-collapse-item {
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .collapse-row {
+        display: flex;
         flex-direction: row;
-        align-items: flex-end;
+        align-items: flex-start;
     }
     .running {
         display: inline-block;
@@ -187,4 +211,38 @@
         margin-right: 10px;
         transform: scale(0.7);
         }
+    .distance {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/distance.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.9);
+        }
+    .energy {
+        display: inline-block;
+        width: 65px;
+        height: 65px;
+        background-image: url(../assets/images/energy.png);
+        background-repeat: no-repeat;
+        padding: 0!important;
+        margin-right: 10px;
+        transform: scale(0.9);
+        }
+    .collapse-row span.label {
+        font-size: .9em;
+        font-style: italic;
+    }
+    .collapse-row span.value {
+        font-size: 1.6em;
+        font-weight: bold;
+        color: #888;
+    }
+    .collapse-row span.unit {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #777;
+    }
 </style>
