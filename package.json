@@ -11,7 +11,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "element-ui": "^2.10.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "leaflet": "^1.5.1",
     "vue": "^2.6.10",
     "vue2-leaflet": "^2.1.1"
